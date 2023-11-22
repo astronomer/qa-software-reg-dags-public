@@ -7,7 +7,7 @@ from airflow.utils.dates import days_ago
 from airflow.utils.timezone import utcnow
 from airflow.sensors.bash import BashSensor
 
-default_args = {"start_date": days_ago(2)}
+default_args = {"start_date": days_ago(0)}
 
 
 with DAG("async_operator", schedule_interval="@daily", default_args=default_args, tags=["core", "async", "extended_dags"]) as dag:
